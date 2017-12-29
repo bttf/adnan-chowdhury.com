@@ -1,0 +1,22 @@
+.headshot {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    margin: 50px auto;
+
+    .image-wrapper {
+        height: 150px;
+        width: 150px;
+        margin: 50px auto;
+        border-radius: 75px;
+        overflow: hidden;
+        box-shadow: 0 0 12px 0px rgba(150, 150, 150, 50);
+
+        .image {
+            background: url(/assets/adnan2.jpg) no-repeat center -5px;
+            background-size: 150%;
+            height: 100%;
+            width: auto;
+        }
+    }
+}
