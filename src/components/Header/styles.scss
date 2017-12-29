@@ -1,12 +1,14 @@
+.header {
+    margin-bottom: 2rem;
+}
+
 .name-and-title {
     text-align: center;
 
     .name {
         font-size: 3rem;
         font-weight: bold;
-        text-shadow: 2px 2px 0 rgba(0, 0, 0, .5);
         margin-bottom: .5rem;
-        color: #69DEFF;
     }
 
     hr {
@@ -17,8 +19,5 @@
     .title {
         font-size: 2rem;
         font-weight: bold;
-        font-style: italic;
-        color: #aaa;
-        text-shadow: 2px 2px 0 rgba(0, 0, 0, .5);
     }
 }
