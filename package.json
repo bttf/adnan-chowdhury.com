@@ -1,0 +1,27 @@
+{
+  "name": "adnan-chowdhury.com",
+  "version": "0.0.1",
+  "author": "bttf",
+  "license": "MIT",
+  "dependencies": {
+    "@types/lodash": "^4.14.91",
+    "@types/react": "^16.0.31",
+    "@types/react-dom": "^16.0.3",
+    "copy-webpack-plugin": "^4.3.1",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.6",
+    "html-webpack-plugin": "^2.30.1",
+    "img-loader": "^2.0.0",
+    "lodash": "^4.17.4",
+    "node-sass": "^4.7.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.1",
+    "ts-loader": "^3.2.0",
+    "typescript": "^2.6.2",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
+  }
+}
