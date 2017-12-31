@@ -13,10 +13,11 @@
         box-shadow: 0 0 12px 0px rgba(150, 150, 150, 50);
 
         .image {
-            background: url(/assets/adnan2.jpg) no-repeat center -5px;
+            background: url(/assets/adnan6.gif) no-repeat center -5px;
             background-size: 150%;
             height: 100%;
             width: auto;
+            filter: contrast(1.2) brightness(1);
         }
     }
 }

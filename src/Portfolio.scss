@@ -1,9 +1,14 @@
 .portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .header {
+        flex: 1 100%;
+    }
+
     .projects {
-        .section-header {
-            font-size: 2rem;
-            font-weight: bold;
-            text-align: center;
-        }
+        margin-top: 4rem;
+        max-width: 800px;
     }
 }

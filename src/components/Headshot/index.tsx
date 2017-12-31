@@ -1,7 +1,7 @@
 import * as React from 'react';
 import CoolCircle from './CoolCircle';
 import _range = require('lodash/range');
-import  './styles.scss';
+import './styles.scss';
 
 export default class Headshot extends React.PureComponent {
     render() {

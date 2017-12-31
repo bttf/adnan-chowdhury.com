@@ -14,7 +14,7 @@ export default class CoolCircle extends React.PureComponent<CoolCircleProps, {}>
         const animationDelay =
             (this.props.animationDuration / this.props.totalCirclesLength) * this.props.index;
         const style = {
-            border: `1px solid ${borderColor}`,
+            border: `2px solid ${borderColor}`,
             animationDelay: `${animationDelay}s`,
             animationDuration: `${this.props.animationDuration}s`,
         };

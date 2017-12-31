@@ -1,9 +1,7 @@
-.header {
-    margin-bottom: 2rem;
-}
-
 .name-and-title {
     text-align: center;
+    color: #333;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, .2);
 
     .name {
         font-size: 3rem;
@@ -19,5 +17,6 @@
     .title {
         font-size: 2rem;
         font-weight: bold;
+        font-style: italic;
     }
 }

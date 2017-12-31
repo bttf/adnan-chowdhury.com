@@ -12,9 +12,8 @@ export default class Portfolio extends React.PureComponent {
                 <Header />
 
                 <div className="projects">
-                    <div className="section-header">Projects</div>
                     {Projects.map((project, index) => (
-                        <Project key={index} project={project} />
+                        <Project key={index} index={index} project={project} bgBlack={project.name.indexOf('Starship Bridge') > -1} />
                     ))}
                 </div>
             </div>
