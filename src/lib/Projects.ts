@@ -61,7 +61,7 @@ export default [
         name: 'Quartzy',
         url: 'https://quartzy.com', 
         displayImg: '/assets/quartzy.png',
-        description: 'Quartzy\'s frontend application uses Ember.js, and I devoted a lot of time developing it.',
+        description: 'Quartzy\'s frontend application uses Ember.js, and I played a big part in developing it.',
         tags: tagManager.getTags(['Ember.js']),
     }),
     new Project({
