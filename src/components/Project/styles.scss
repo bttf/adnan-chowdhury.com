@@ -4,6 +4,8 @@
   justify-content: center;
   margin-bottom: 2rem;
 
+  transition: all .5s;
+
   .logo {
     flex: 1 100%;
 
@@ -54,11 +56,13 @@
     .description {
       margin-bottom: 1rem;
       font-size: 1.2rem;
+      text-align: center;
     }
 
     .tags {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       margin-bottom: 1rem;
       width: 100%;
 
@@ -68,19 +72,18 @@
         padding: .25rem .5rem;
         margin-right: .5rem;
         border-radius: .5rem;
+        cursor: pointer;
 
         &:last-child {
           margin-right: 0;
         }
       }
     }
-
     @media(min-width: 400px) {
       padding: 0 3rem;
     }
   }
 }
-
 @media(min-width: 550px) {
   .project {
     display: flex;
@@ -99,6 +102,14 @@
         .name {
           text-align: left;
         }
+
+        .description {
+          text-align: left;
+        }
+      }
+
+      .tags {
+        justify-content: flex-start;
       }
     }
 
@@ -110,7 +121,10 @@
       .name-and-description {
         order: 0;
         align-items: flex-end;
-        text-align: right;
+
+        .description {
+          text-align: right;
+        }
       }
 
       .tags {
