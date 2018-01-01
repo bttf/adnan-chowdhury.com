@@ -2,6 +2,8 @@ import * as React from 'react';
 import Tag from 'components/Tag';
 import { IProject } from 'lib/Projects';
 import { ITag } from 'lib/TagManager';
+import _kebab = require('lodash/kebabCase');
+import _keys = require('lodash/keys');
 import './styles.scss';
 
 interface ProjectProps {
@@ -17,7 +19,7 @@ export default class Project extends React.PureComponent<ProjectProps, {}> {
         const isEvenIndex = this.props.index % 2 === 0;
 
         return (
-            <div className={`project ${isEvenIndex ? 'even' : 'odd'}`}>
+            <div className={`project ${isEvenIndex ? 'even' : 'odd'} ${_kebab(this.props.project.name)}`}>
                 <div className={`logo ${isBgBlack ? 'bg-black' : ''}`}><img src={this.props.project.displayImg} alt={this.props.project.name} /></div>
 
                 <div className="name-and-description">
@@ -26,7 +28,10 @@ export default class Project extends React.PureComponent<ProjectProps, {}> {
                     </div>
 
                     <div className="description">
-                        {this.props.project.description}
+                        {this.props.project.description} 
+                        {_keys(this.props.project.urls).map(key => (
+                            <span className="url"> (<a href={this.props.project.urls[key]}>{key}</a>) </span>
+                        ))}
                     </div>
 
                     <div className="tags">
