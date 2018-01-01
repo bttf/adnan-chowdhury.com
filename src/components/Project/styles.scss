@@ -65,25 +65,14 @@
       justify-content: center;
       margin-bottom: 1rem;
       width: 100%;
-
-      .tag {
-        margin-bottom: .5rem;
-        color: white;
-        padding: .25rem .5rem;
-        margin-right: .5rem;
-        border-radius: .5rem;
-        cursor: pointer;
-
-        &:last-child {
-          margin-right: 0;
-        }
-      }
     }
+
     @media(min-width: 400px) {
       padding: 0 3rem;
     }
   }
 }
+
 @media(min-width: 550px) {
   .project {
     display: flex;

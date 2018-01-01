@@ -1,0 +1,12 @@
+.tag {
+  margin-bottom: .5rem;
+  color: white;
+  padding: .25rem .5rem;
+  margin-right: .5rem;
+  border-radius: .5rem;
+  cursor: pointer;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

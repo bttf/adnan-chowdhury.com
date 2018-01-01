@@ -1,4 +1,4 @@
-import TagManager, { ITag } from 'lib/TagManager';
+import TagManager, { ITag, ITagManager } from 'lib/TagManager';
 
 export interface IProject {
     name: string;
@@ -7,6 +7,7 @@ export interface IProject {
     demoImg?: string;
     description: string;
     tags: Array<ITag>;
+    tagManager: ITagManager;
 }
 
 class Project implements IProject {
@@ -16,6 +17,7 @@ class Project implements IProject {
     demoImg?: string;
     description: string;
     tags: Array<ITag>;
+    tagManager: ITagManager;
 
     constructor({ name, url, displayImg, demoImg, description, tags }: IProject) {
         this.name = name;
@@ -49,6 +51,7 @@ export default [
         displayImg: '/assets/starship.png',
         description: 'In-browser starship simulator, modeled after Star Trek canon.',
         tags: tagManager.getTags(['TypeScript', 'React', 'Webpack']),
+        tagManager,
     }),
     new Project({
         name: 'This Portfolio',
@@ -56,6 +59,7 @@ export default [
         displayImg: '',
         description: 'A place to show off my cool projects.',
         tags: tagManager.getTags(['TypeScript', 'React', 'Webpack']),
+        tagManager,
     }),
     new Project({
         name: 'Quartzy',
@@ -63,6 +67,7 @@ export default [
         displayImg: '/assets/quartzy.png',
         description: 'Quartzy\'s frontend application uses Ember.js, and I played a big part in developing it.',
         tags: tagManager.getTags(['Ember.js']),
+        tagManager,
     }),
     new Project({
         name: 'Scribble.today',
@@ -70,6 +75,7 @@ export default [
         displayImg: '/assets/scribble.svg',
         description: 'A full-stack journaling web application that inspires creativity by utilizing Impressionist art.',
         tags: tagManager.getTags(['Ember.js', 'Node.js', 'PostgreSQL', 'Docker']),
+        tagManager,
     }),
     new Project({
         name: 'Slushi.es',
@@ -77,6 +83,7 @@ export default [
         displayImg: '/assets/slushies.png',
         description: 'A cloud bookmarking solution made as a utility for browsing the web.',
         tags: tagManager.getTags(['Ember.js', 'Node.js', 'PostgreSQL', 'Docker']),
+        tagManager,
     }),
     new Project({
         name: 'SubwayPOS - IPC',
@@ -84,6 +91,7 @@ export default [
         displayImg: '/assets/subwaypos.png',
         description: 'Built CI/CD pipeline with Puppet, Ruby, and Windows Powershell to fully automate build and test process for SubwayPOS application, built with C# and .NET.',
         tags: tagManager.getTags(['Ember.js', 'Node.js', 'PostgreSQL', 'Docker']),
+        tagManager,
     }),
     new Project({
         name: 'Meditation with Talah Rama',
@@ -91,5 +99,6 @@ export default [
         displayImg: '/assets/meditation1.png',
         description: 'A meditation timer built for the NintendoDS.',
         tags: tagManager.getTags(['C', 'gcc', 'gdb']),
+        tagManager,
     }),
 ];

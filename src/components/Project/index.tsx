@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Tag from 'components/Tag';
 import { IProject } from 'lib/Projects';
 import { ITag } from 'lib/TagManager';
 import './styles.scss';
@@ -11,10 +12,6 @@ interface ProjectProps {
 }
 
 export default class Project extends React.PureComponent<ProjectProps, {}> {
-    addTagFilter(tag: ITag) {
-        this.props.addTagFilter(tag);
-    }
-
     render() {
         const isBgBlack = !!this.props.bgBlack;
         const isEvenIndex = this.props.index % 2 === 0;
@@ -33,16 +30,8 @@ export default class Project extends React.PureComponent<ProjectProps, {}> {
                     </div>
 
                     <div className="tags">
-                        {this.props.project.tags.map((tag, index) => {
-                            const style = {
-                                backgroundColor: tag.color,
-                            };
-                            return (
-                                <div className="tag" key={index} style={style} onClick={this.addTagFilter.bind(this, tag)}>
-                                    {tag.name}
-                                </div>
-                            )
-                        })}
+                        {this.props.project.tags.map((tag, index) =>
+                            (<Tag key={index} tag={tag} onClick={this.props.addTagFilter} />))}
                     </div>
                 </div>
             </div>

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Header from 'components/Header';
 import Project from 'components/Project';
+import Tag from 'components/Tag';
 import Projects from 'lib/Projects';
 import { ITag } from 'lib/TagManager';
 import _intersectionWith = require('lodash/intersectionWith');
@@ -24,6 +25,9 @@ export default class Portfolio extends React.PureComponent<{}, PortfolioState> {
 
     addTagFilter(tag: ITag) {
         const activeTags = this.state.activeTags.slice();
+
+        if (activeTags.includes(tag)) return;
+
         activeTags.push(tag);
         this.setState({ activeTags });
     }
@@ -44,15 +48,20 @@ export default class Portfolio extends React.PureComponent<{}, PortfolioState> {
             return _intersectionWith(activeTags, projectTags, (x: ITag, y: ITag) => x.name === y.name).length;
         });
 
+        const activeTags = (
+            <div className="active-tags">
+                <span className="label">Active Filters:</span>
+                {this.state.activeTags.map((tag, index) => (
+                    <Tag key={index} tag={tag} onClick={this.removeTagFilter} />
+                ))}
+            </div>
+        );
+
         return (
             <div className="portfolio">
                 <Header />
 
-                <div className="active-tags">
-                    {this.state.activeTags.map((tag, index) => (
-                        <div key={index} className="active-tag">{tag.name}</div>
-                    ))}
-                </div>
+                {this.state.activeTags.length ? activeTags : null}
 
                 <div className="projects">
                     {projects.map((project, index) => (
