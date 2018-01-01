@@ -10,7 +10,7 @@ export default class Headshot extends React.PureComponent {
         return (
             <div className="headshot">
                 <div className="image-wrapper">
-                    <div className="image"></div>
+                    <div className="image" title="Spirit Animal"></div>
                     {_range(numberOfCoolCircles).map((val, index) =>
                         (<CoolCircle key={index} index={index} animationDuration={12} totalCirclesLength={numberOfCoolCircles} />))}
                 </div>

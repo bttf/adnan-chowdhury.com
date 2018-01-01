@@ -1,34 +1,65 @@
+$maxWidth: 800px;
+
 .portfolio {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
 
-    .header {
-        flex: 1 100%;
+  hr {
+    width: 40%;
+    border: 1px solid #eee;
+  }
+
+  .header {
+    flex: 1;
+    margin-bottom: 1rem;
+  }
+
+  .introduction {
+    flex: 1;
+
+    max-width: $maxWidth;
+
+    font-size: 1.2rem;
+
+    p {
+      max-width: $maxWidth;
+      margin: 1rem 2rem;
     }
+  }
 
-    .projects {
-        margin-top: 2rem;
-        max-width: 800px;
+  .projects {
+    flex: 1;
+    margin-top: 2rem;
+    max-width: $maxWidth;
 
-        .project.this-portfolio .logo img {
-            position: absolute;
-            top: 0;
-        }
+    .title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      font-style: italic;
+      text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+      margin-bottom: 2rem;
     }
 
     .active-tags {
-        display: flex;
-        flex: 1 100%;
-        justify-content: center;
-        align-items: center;
-        margin-top: 3rem;
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2rem;
 
-        .label {
-            font-weight: 500;
-            margin-right: .5rem;
-            padding: .25rem 0;
-            margin-bottom: .5rem;
-        }
+      .label {
+        font-weight: 500;
+        margin-right: .5rem;
+        padding: .25rem 0;
+        margin-bottom: .5rem;
+      }
     }
+  }
+
+  .footer {
+      margin-bottom: 1rem;
+  }
 }

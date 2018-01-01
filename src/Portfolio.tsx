@@ -61,9 +61,29 @@ export default class Portfolio extends React.PureComponent<{}, PortfolioState> {
             <div className="portfolio">
                 <Header />
 
-                {this.state.activeTags.length ? activeTags : null}
+                <div className="introduction">
+                    <p>Hello! My name is Adnan, and I am a software
+                        engineer located in the SF Bay Area.</p>
+                    <p>My current expertise lies in modern JavaScript, and
+                        frontend development.</p>
+                    <p>In the past, I've worked with a range of projects, from
+                        full-stack to embedded systems, and hold a B.A. degree
+                        in Comp Sci, with a minor in Humanities.</p>
+                    <p>Find me on&nbsp;
+                        <a href="https://github.com/bttf">GitHub</a>,&nbsp;
+                        <a href="https://twitter.com/_adnanchowdhury">Twitter</a>,&nbsp;
+                        <a href="https://linkedin.com/in/adnanchowdhury88">LinkedIn</a>,&nbsp;
+                        or check out my <a href="http://blog.88mph.io">Blog Posts</a>.
+                        </p>
+                </div>
 
                 <div className="projects">
+                    <div className="title">
+                        Projects
+                    </div>
+
+                    {this.state.activeTags.length ? activeTags : null}
+
                     {projects.map((project, index) => (
                         <Project
                             key={index}
@@ -73,6 +93,14 @@ export default class Portfolio extends React.PureComponent<{}, PortfolioState> {
                             bgBlack={project.name.indexOf('Starship Bridge') > -1} 
                         />
                     ))}
+                </div>
+
+                <div className="footer">
+                    <div className="links">
+                    </div>
+                    <div className="copyright">
+                        © 2018 Adnan Chowdhury
+                    </div>
                 </div>
             </div>
         );

@@ -1,23 +1,28 @@
 .headshot {
-    position: relative;
+  position: relative;
+  height: 150px;
+  width: 150px;
+  margin: 50px auto;
+
+  .image-wrapper {
     height: 150px;
     width: 150px;
     margin: 50px auto;
+    border-radius: 75px;
 
-    .image-wrapper {
-        height: 150px;
-        width: 150px;
-        margin: 50px auto;
-        border-radius: 75px;
-        overflow: hidden;
-        box-shadow: 0 0 12px 0px rgba(150, 150, 150, 50);
+    .image {
+      background: url("/assets/adnan6.gif") no-repeat center -5px;
+      background-size: 150%;
+      border-radius: 75px;
+      height: 100%;
+      width: auto;
+      filter: contrast(1.2) brightness(1);
+      transition: transform .7s;
+      box-shadow: 0 0 12px 0 rgba(150, 150, 150, 50);
 
-        .image {
-            background: url(/assets/adnan6.gif) no-repeat center -5px;
-            background-size: 150%;
-            height: 100%;
-            width: auto;
-            filter: contrast(1.2) brightness(1);
-        }
+      &:hover {
+        transform: scale(1.4, 1.4);
+      }
     }
+  }
 }

@@ -29,8 +29,8 @@ export default class Project extends React.PureComponent<ProjectProps, {}> {
 
                     <div className="description">
                         {this.props.project.description} 
-                        {_keys(this.props.project.urls).map(key => (
-                            <span className="url"> (<a href={this.props.project.urls[key]}>{key}</a>) </span>
+                        {_keys(this.props.project.urls).map((key, index) => (
+                            <span key={index} className="url"> (<a href={this.props.project.urls[key]}>{key}</a>) </span>
                         ))}
                     </div>
 
