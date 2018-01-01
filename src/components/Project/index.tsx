@@ -25,6 +25,19 @@ export default class Project extends React.PureComponent<ProjectProps, {}> {
                     <div className="description">
                         {this.props.project.description}
                     </div>
+
+                    <div className="tags">
+                        {this.props.project.tags.map((tag, index) => {
+                            const style = {
+                                backgroundColor: tag.color,
+                            };
+                            return (
+                                <div className="tag" key={index} style={style}>
+                                    {tag.name}
+                                </div>
+                            )
+                        })}
+                    </div>
                 </div>
             </div>
         );
