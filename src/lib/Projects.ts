@@ -44,6 +44,8 @@ tagManager.createTags([
     'gdb',
     'Work-in-Progress',
     'PHP7',
+    'React-Native',
+    'GraphQL',
 ]);
 
 export default [
@@ -75,6 +77,16 @@ export default [
         displayImg: '/assets/portfolio.png',
         description: 'A place to show off my cool projects.',
         tags: tagManager.getTags(['TypeScript', 'React', 'Webpack']),
+        tagManager,
+    }),
+    new Project({
+        name: 'Sweat Club',
+        urls: {
+            'Visit': 'https://sweat.club/',
+        },
+        displayImg: '/assets/sweater.png',
+        description: 'A mobile app to find your local sauna, or to purchase and host your own.',
+        tags: tagManager.getTags(['React', 'React-Native', 'GraphQL', 'Work-in-Progress']),
         tagManager,
     }),
     new Project({
