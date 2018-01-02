@@ -70,16 +70,6 @@ export default [
         tagManager,
     }),
     new Project({
-        name: 'This Portfolio',
-        urls: {
-            'GitHub': 'https://github.com/bttf/adnan-chowdhury.com',
-        },
-        displayImg: '/assets/portfolio.png',
-        description: 'A place to show off my cool projects.',
-        tags: tagManager.getTags(['TypeScript', 'React', 'Webpack']),
-        tagManager,
-    }),
-    new Project({
         name: 'Sweat Club',
         urls: {
             'Visit': 'https://sweat.club/',
@@ -87,6 +77,16 @@ export default [
         displayImg: '/assets/sweater.png',
         description: 'A mobile app to find your local sauna, or to purchase and host your own.',
         tags: tagManager.getTags(['React', 'React-Native', 'GraphQL', 'Work-in-Progress']),
+        tagManager,
+    }),
+    new Project({
+        name: 'Slushi.es',
+        urls: {
+            'Visit': 'https://slushi.es',
+        },
+        displayImg: '/assets/slushies.png',
+        description: 'A cloud bookmarking solution made as a utility for browsing the web.',
+        tags: tagManager.getTags(['Ember.js', 'Node.js', 'PostgreSQL', 'Docker']),
         tagManager,
     }),
     new Project({
@@ -100,13 +100,13 @@ export default [
         tagManager,
     }),
     new Project({
-        name: 'Slushi.es',
+        name: 'This Portfolio',
         urls: {
-            'Visit': 'https://slushi.es',
+            'GitHub': 'https://github.com/bttf/adnan-chowdhury.com',
         },
-        displayImg: '/assets/slushies.png',
-        description: 'A cloud bookmarking solution made as a utility for browsing the web.',
-        tags: tagManager.getTags(['Ember.js', 'Node.js', 'PostgreSQL', 'Docker']),
+        displayImg: '/assets/portfolio.png',
+        description: 'A place to show off my cool projects.',
+        tags: tagManager.getTags(['TypeScript', 'React', 'Webpack']),
         tagManager,
     }),
     new Project({
