@@ -42,18 +42,29 @@ tagManager.createTags([
     'C',
     'gcc',
     'gdb',
+    'Work-in-Progress',
+    'PHP7',
 ]);
 
 export default [
     new Project({
-        name: 'Starship Bridge Simulator',
+        name: 'Scribble.today',
         urls: {
-            'Visit': 'https://starship.88mph.io',
-            'GitHub': 'https://github.com/bttf/starship-bridge-simulator',
+            'Visit': 'https://scribble.today',
         },
-        displayImg: '/assets/starship-bridge.gif',
-        description: 'In-browser starship simulator, modeled after Star Trek canon.',
-        tags: tagManager.getTags(['TypeScript', 'React', 'Webpack']),
+        displayImg: '/assets/scribble.svg',
+        description: 'A full-stack journaling web application that inspires creativity by utilizing Impressionist art.',
+        tags: tagManager.getTags(['Ember.js', 'Node.js', 'PostgreSQL', 'Docker']),
+        tagManager,
+    }),
+    new Project({
+        name: 'Quartzy',
+        urls: {
+            'Visit': 'https://quartzy.com',
+        },
+        displayImg: '/assets/quartzy.png',
+        description: 'Quartzy\'s frontend application uses Ember.js, and I played a big part in developing it.',
+        tags: tagManager.getTags(['Ember.js', 'PHP7', 'Node.js']),
         tagManager,
     }),
     new Project({
@@ -67,23 +78,14 @@ export default [
         tagManager,
     }),
     new Project({
-        name: 'Quartzy',
+        name: 'Starship Bridge Simulator',
         urls: {
-            'Visit': 'https://quartzy.com',
+            'Visit': 'https://starship.88mph.io',
+            'GitHub': 'https://github.com/bttf/starship-bridge-simulator',
         },
-        displayImg: '/assets/quartzy.png',
-        description: 'Quartzy\'s frontend application uses Ember.js, and I played a big part in developing it.',
-        tags: tagManager.getTags(['Ember.js']),
-        tagManager,
-    }),
-    new Project({
-        name: 'Scribble.today',
-        urls: {
-            'Visit': 'https://scribble.today',
-        },
-        displayImg: '/assets/scribble.svg',
-        description: 'A full-stack journaling web application that inspires creativity by utilizing Impressionist art.',
-        tags: tagManager.getTags(['Ember.js', 'Node.js', 'PostgreSQL', 'Docker']),
+        displayImg: '/assets/starship-bridge.gif',
+        description: 'In-browser starship simulator, modeled after Star Trek canon.',
+        tags: tagManager.getTags(['TypeScript', 'React', 'Webpack', 'Work-in-Progress']),
         tagManager,
     }),
     new Project({
