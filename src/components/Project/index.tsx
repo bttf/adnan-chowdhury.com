@@ -17,6 +17,7 @@ export default class Project extends React.PureComponent<ProjectProps, {}> {
     render() {
         const isBgBlack = !!this.props.bgBlack;
         const isEvenIndex = this.props.index % 2 === 0;
+        const visitURL = this.props.project.urls && this.props.project.urls['Visit'];
 
         return (
             <div className={`project ${isEvenIndex ? 'even' : 'odd'} ${_kebab(this.props.project.name)}`}>
@@ -24,11 +25,12 @@ export default class Project extends React.PureComponent<ProjectProps, {}> {
 
                 <div className="name-and-description">
                     <div className="name">
-                        {this.props.project.name}
+                        {visitURL ?
+                            (<a href={visitURL}>{this.props.project.name}</a>) : this.props.project.name}
                     </div>
 
                     <div className="description">
-                        {this.props.project.description} 
+                        {this.props.project.description}
                         {_keys(this.props.project.urls).map((key, index) => (
                             <span key={index} className="url"> (<a href={this.props.project.urls[key]}>{key}</a>) </span>
                         ))}

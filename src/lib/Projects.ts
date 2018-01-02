@@ -92,7 +92,6 @@ export default [
     new Project({
         name: 'Starship Bridge Simulator',
         urls: {
-            'Visit': 'https://starship.88mph.io',
             'GitHub': 'https://github.com/bttf/starship-bridge-simulator',
         },
         displayImg: '/assets/starship-bridge.gif',
@@ -123,7 +122,7 @@ export default [
     new Project({
         name: 'Meditation with Talah Rama',
         urls: {
-            'Read': 'https://earthboundcentral.com/2009/04/meditation-with-talah-rama/',
+            'Visit': 'https://earthboundcentral.com/2009/04/meditation-with-talah-rama/',
         },
         displayImg: '/assets/meditation1.png',
         description: 'A meditation timer built for the NintendoDS.',

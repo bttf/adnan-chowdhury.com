@@ -67,12 +67,12 @@ export default class Portfolio extends React.PureComponent<{}, PortfolioState> {
                     <p>My current expertise lies in modern JavaScript, and
                         frontend development.</p>
                     <p>In the past, I've worked with a range of projects, from
-                        full-stack to embedded systems, and hold a B.A. degree
-                        in Comp Sci, with a minor in Humanities.</p>
+                        full-stack to embedded systems. I hold a B.A.
+                        in Computer Science, with a minor in Humanities.</p>
                     <p>Find me on&nbsp;
                         <a href="https://github.com/bttf">GitHub</a>,&nbsp;
                         <a href="https://twitter.com/_adnanchowdhury">Twitter</a>,&nbsp;
-                        <a href="https://linkedin.com/in/adnanchowdhury88">LinkedIn</a>,&nbsp;
+                        <a href="https://linkedin.com/in/adnanchowdhury88">LinkedIn</a>,
                         or check out my <a href="http://blog.88mph.io">Blog Posts</a>.
                         </p>
                 </div>
@@ -90,7 +90,7 @@ export default class Portfolio extends React.PureComponent<{}, PortfolioState> {
                             index={index}
                             project={project}
                             addTagFilter={this.addTagFilter}
-                            bgBlack={project.name.indexOf('Starship Bridge') > -1} 
+                            bgBlack={project.name.indexOf('Starship Bridge') > -1}
                         />
                     ))}
                 </div>
