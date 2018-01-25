@@ -1,6 +1,6 @@
 #/bin/bash
 
-yarn build
+yarn build -p
 cd dist
 git init
 git add -A
