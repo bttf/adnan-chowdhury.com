@@ -82,7 +82,7 @@ export default [
     new Project({
         name: 'Slushi.es',
         urls: {
-            'Visit': 'https://slushi.es',
+            'Visit': 'http://slushies.redpine.software',
         },
         displayImg: '/assets/slushies.png',
         description: 'A cloud bookmarking solution made as a utility for browsing the web.',
