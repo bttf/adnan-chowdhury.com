@@ -5,7 +5,7 @@ import './styles.scss';
 
 export default class Headshot extends React.PureComponent {
   render() {
-    const numberOfCoolCircles = 48;
+    const numberOfCoolCircles = 24;
 
     return (
       <div className="headshot">
