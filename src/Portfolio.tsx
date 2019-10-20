@@ -7,7 +7,7 @@ import { ITag } from 'lib/TagManager';
 import _intersectionWith = require('lodash/intersectionWith');
 import './Portfolio.scss';
 
-interface PortfolioState {
+type PortfolioState {
   activeTags: Array<ITag>;
 }
 
@@ -67,7 +67,7 @@ export default class Portfolio extends React.PureComponent<{}, PortfolioState> {
           <p>My current expertise lies in modern JavaScript, and
             frontend development.</p>
           <p>In the past, I've worked with a range of projects, from
-      full-stack to embedded systems. I hold a B.A.
+      full-stack web applications to embedded systems. I hold a B.A.
       in Computer Science, with a minor in Humanities.</p>
     <p>Find me on&nbsp;
       <a href="https://github.com/bttf">GitHub</a>,&nbsp;
@@ -99,7 +99,7 @@ export default class Portfolio extends React.PureComponent<{}, PortfolioState> {
         <div className="links">
         </div>
         <div className="copyright">
-          © 2018 Adnan Chowdhury
+          © {new Date().getFullYear()} Adnan Chowdhury
         </div>
       </div>
     </div>
