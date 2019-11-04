@@ -193,12 +193,12 @@ export default ({
           {description}
 
           {Object.keys(urls).map(cta => (
-            <span> (<a href={urls[cta]}>{cta}</a>)</span>
+            <span key={cta}> (<a href={urls[cta]}>{cta}</a>)</span>
           ))}
         </Description>
 
         <Tags alignRight={reverseOrder}>
-          {tags.map((t, i) => (<Tag index={i} tag={t}>{t}</Tag>))}
+          {tags.map((t, i) => (<Tag key={t} index={i} tag={t}>{t}</Tag>))}
         </Tags>
       </NameAndDescription>
     </Container>
