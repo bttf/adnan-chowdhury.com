@@ -44,18 +44,6 @@ export const TAGS = {
 export default () => {
   return (
     <Container>
-      <Title>Completed Projects</Title>
-
-      <Divider style={{ marginBottom: '2rem' }} />
-
-      {completedProjects.map((project, i) => (
-        <Project
-          key={project.name}
-          index={i}
-          {...project}
-        />
-      ))}
-
       <Title>Incomplete Projects</Title>
 
       <Divider style={{ marginBottom: '2rem' }} />
@@ -67,27 +55,23 @@ export default () => {
           {...project}
         />
       ))}
+
+      <Title>Completed Projects</Title>
+
+      <Divider style={{ marginBottom: '2rem' }} />
+
+      {completedProjects.map((project, i) => (
+        <Project
+          key={project.name}
+          index={i}
+          {...project}
+        />
+      ))}
     </Container>
   );
 };
 
 const completedProjects = [{
-  name: 'Capital Calendar',
-  urls: {
-    'Visit': 'https://capcal.redpine.software',
-  },
-  displayImg: '/capcal.png',
-  description: 'Track your expenses on a daily basis using Google Calendar.',
-  tags: [TAGS.NODE, TAGS.POSTGRES, TAGS.DOCKER, TAGS.KUBERNETES, TAGS.REACT, TAGS.GRAPHQL]
-}, {
-  name: 'This Portfolio',
-  urls: {
-    'GitHub': 'https://github.com/bttf/adnan-chowdhury.com',
-  },
-  displayImg: '/portfolio.png',
-  description: 'A place to show off my cool projects.',
-  tags: [TAGS.REACT, TAGS.WEBPACK],
-}, {
   name: 'Slushi.es',
   urls: {
     'Visit': 'http://slushies.redpine.software',
@@ -139,6 +123,14 @@ const completedProjects = [{
 }];
 
 const incompleteProjects = [{
+  name: 'Capital Calendar',
+  urls: {
+    'Visit': 'https://capcal.redpine.software',
+  },
+  displayImg: '/capcal.png',
+  description: 'Track your expenses on a daily basis using Google Calendar.',
+  tags: [TAGS.NODE, TAGS.POSTGRES, TAGS.DOCKER, TAGS.KUBERNETES, TAGS.REACT, TAGS.GRAPHQL]
+}, {
   name: 'Sweat Club',
   urls: {
     'Visit': 'https://sweat.club/',
