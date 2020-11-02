@@ -1,0 +1,22 @@
+@keyframes rippleEffect {
+    0% { transform: scale(.9, .9); opacity: 1; }
+    10% { opacity: 1; }
+    40% { opacity: 0; }
+    100% { transform: scale(2, 2); opacity: 0; }
+}
+
+.ripple {
+  position: absolute;
+  top: 0;
+  z-index: -9;
+
+  height: 150px;
+  width: 150px;
+
+  border-radius: 75px;
+
+  opacity: 0;
+
+  animation-name: rippleEffect;
+  animation-iteration-count: infinite;
+}

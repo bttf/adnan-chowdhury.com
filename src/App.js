@@ -1,35 +1,45 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import styled from 'styled-components';
 import Header from './Header';
 import Projects from './Projects';
 
 export const MAX_WIDTH = '800px';
 
-const Container = styled('div')`
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-`;
+const Container = ({ children }) => (
+  <div
+    style={{
+      display: 'flex',
+      flexDirection: 'column',
+      flexWrap: 'wrap',
+      alignItems: 'center',
+    }}
+  >
+      {children}
+  </div>
+);
 
-const IntroductoryText = styled('div')`
-  flex: 1;
-  max-width: ${MAX_WIDTH};
-  font-size: 1rem;
+const IntroductoryText = ({ children }) => (
+  <div style={{
+    flex: 1,
+    maxWidth: MAX_WIDTH,
+    fontSize: '1rem',
+  }}>{children}</div>
+);
 
-  p {
-    max-width: $maxWidth;
-    margin: 1rem 2rem;
-  }
-`;
+const P = ({ children }) => (
+  <p style={{
+    maxWidth: MAX_WIDTH,
+    fontSize: '1rem',
+  }}>
+    {children}
+  </p>
+);
 
-const Copyright = styled('div')`
-  text-align: center;
-  margin-bottom: 2rem;
-`;
+const Copyright = ({children}) => (
+    <div style={{ textAlign: 'center', marginBottom: '2rem'}}>{children}</div>
+);
 
-const App = ({ blogPosts }) => (
+const App = () => (
     <Container>
       <Header />
 

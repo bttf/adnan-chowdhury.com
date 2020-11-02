@@ -1,24 +1,31 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import { MAX_WIDTH } from '../App'
 import { Divider } from '../Header';
 import Project from './Project';
 
-const Container = styled('div')`
-  flex: 1;
-  margin-top: 2rem;
-  max-width: 800px;
-`;
+const Container = ({ children }) => (
+  <div
+    style={{
+      flex: 1,
+      marginTop: '2rem',
+      maxWidth: '800px',
+    }}
+  >{children}</div>
+);
 
-const Title = styled('div')`
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-  font-style: italic;
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
-  margin-bottom: 1rem;
-`;
+const Title = ({ children }) => (
+  <div
+    style={{
+      textAlign: 'center',
+      fontSize: '2rem',
+      fontWeight: 'bold',
+      fontStyle: 'italic',
+      textShadow: '1px 1px 0 rgba(0, 0, 0, 0.2)',
+      marginBottom: '1rem',
+    }}
+  >{children}</div>
+);
 
 export const TAGS = {
   WEBPACK: 'Webpack',

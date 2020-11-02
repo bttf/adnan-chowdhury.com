@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { values } from 'lodash';
+import './Project.css';
 
 import { TAGS } from '.';
 
@@ -9,127 +10,36 @@ const getTagColor = tag => {
   return `hsl(${(index * 66) + 200}, 70%, 50%)`;
 };
 
-const Container = styled('div')`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 2rem;
+const Container = ({ children }) => (
+  <div className="container">
+    {children}
+  </div>
+)
 
-  transition: all .5s;
+const Logo = ({ alignRight, bgColor, children }) => (
+  <div
+    className={`logo ${alignRight ? 'right' : ''}`}
+    style={{
+      backgroundColor: bgColor || 'white',
+    }}
+  >
+      {children}
+  </div>
+);
 
-  @media(min-width: 550px) {
-    display: flex;
-    align-items: center;
-    margin-bottom: 4rem;
-  }
-`;
+const NameAndDescription = ({ alignRight, children }) => (
+  <div className={`name-and-description ${alignRight ? 'right' : ''}`}>
+    {children}
+  </div>
+);
 
-const Logo = styled('div')`
-  flex: 1 100%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  position: relative;
-
-  max-width: 200px;
-  height: 200px;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  overflow: hidden;
-
-  border-radius: 1rem;
-
-  box-sizing: border-box;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-
-  background-color: ${p => p.bgColor ? p.bgColor : 'white'};
-
-  img {
-    width: 100%;
-    height: auto;
-  }
-
-  @media(min-width: 550px) {
-    order: ${p => p.alignRight ? 1 : 0};
-
-    flex: 1;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    max-width: 200px;
-    height: 200px;
-
-    margin: 0 2rem;
-    padding: .5rem 1rem;
-    box-sizing: border-box;
-
-    border-radius: 24px;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-
-    overflow: hidden;
-
-    img {
-      width: 100%;
-    }
-  }
-`;
-
-const NameAndDescription = styled('div')`
-  flex: 1 100%;
-
-  padding: 0 2rem;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  @media(min-width: 400px) {
-    padding: 0 3rem;
-  }
-
-  @media(min-width: 550px) {
-    order: ${p => p.alignRight ? 1 : 0};
-
-    align-items: ${p => p.alignRight ? 'flex-start' : 'flex-end'};
-    text-align: left;
-
-    flex: 1;
-    padding: 0 1rem;
-    height: 200px;
-  }
-`;
-
-const Name = styled('div')`
-  font-size: 2rem;
-  font-weight: 400;
-
-  margin-bottom: 1rem;
-
-  text-align: center;
-
-  a {
-    color: #333;
-    text-decoration: none;
-  }
-
-  @media(min-width: 550px) {
-    flex: 1;
-
-    display: flex;
-    align-items: center;
-
-    font-size: 2rem;
-    font-weight: 400;
-
-    padding: .5rem 0;
-    margin-bottom: 0;
-  }
-`;
+const Name = ({ children }) => (
+  <div
+    className="name"
+  >
+    {children}
+  </div>
+);
 
 const Description = styled('div')`
   margin-bottom: 1rem;

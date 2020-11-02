@@ -12,29 +12,6 @@ const stylesheet = new ServerStyleSheet();
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
 const server = express();
 
-const getBlogPosts = () => {
-  const blogPostsPath = path.resolve(process.env.RAZZLE_PUBLIC_DIR, 'blog_posts');
-  let blogPosts = fs.readdirSync(blogPostsPath);
-
-  blogPosts = blogPosts.map(post => {
-    const fsStat = fs.statSync(path.resolve(blogPostsPath, post));
-    const createdAt = fsStat.ctime;
-    const modifiedAt = fsStat.mtime;
-    const title = upperFirst(post.split('.')[0].replace(/_/g, ' '));
-
-    return {
-      title,
-      createdAt,
-      modifiedAt,
-      filename: post,
-    };
-  }).sort((a, b) => {
-    return b.createdAt > a.createdAt ? 1 : b.createdAt === a.createdAt ? 0 : -1;
-  });
-
-  return blogPosts;
-};
-
 let styleTags;
 try {
   stylesheet.collectStyles(
@@ -53,10 +30,9 @@ server.use(express.static(process.env.RAZZLE_PUBLIC_DIR));
 
 server.get('/*', (req, res) => {
   const context = {};
-  const blogPosts = getBlogPosts();
   const markup = renderToString(
     <StaticRouter context={context} location={req.url}>
-      <App blogPosts={blogPosts} />
+      <App />
     </StaticRouter>
   );
 
@@ -84,9 +60,6 @@ server.get('/*', (req, res) => {
           }
         </style>
         ${styleTags}
-        <script>
-          window.blogPosts = ${JSON.stringify(blogPosts)};
-        </script>
         ${
           assets.client.css
             ? `<link rel="stylesheet" href="${assets.client.css}">`
